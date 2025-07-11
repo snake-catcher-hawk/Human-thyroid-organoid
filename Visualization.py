@@ -4,7 +4,11 @@ import gseapy as gp
 import matplotlib
 import matplotlib.pyplot as plt
 
+# 设置中文字体（适用于 Mac，自动回退）
+matplotlib.rcParams['font.sans-serif'] = ['PingFang SC', 'Arial Unicode MS', 'SimHei', 'Heiti TC', 'STHeiti', 'Microsoft YaHei']
+matplotlib.rcParams['axes.unicode_minus'] = False
 adata = sc.read_h5ad("adata_all.h5ad")
+
 # 或
 adata_45 = sc.read_h5ad("adata_45.h5ad")
 adata_58 = sc.read_h5ad("adata_58.h5ad")
@@ -20,4 +24,3 @@ sc.pl.umap(adata_58_filtered, color='leiden', title='Day58 Clusters', legend_loc
 # celltype CHN
 sc.pl.umap(adata_45, color='celltype', title='Day45 Cell Types', legend_loc='on data', save='_day45_celltype.png')
 sc.pl.umap(adata_58_filtered, color='celltype', title='Day58 Cell Types', legend_loc='on data', save='_day58_celltype.png')
-

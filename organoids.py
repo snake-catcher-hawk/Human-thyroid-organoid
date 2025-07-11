@@ -4,10 +4,6 @@ import gseapy as gp
 import matplotlib
 import matplotlib.pyplot as plt
 
-# 设置中文字体（适用于 Mac，自动回退）
-matplotlib.rcParams['font.sans-serif'] = ['PingFang SC', 'Arial Unicode MS', 'SimHei', 'Heiti TC', 'STHeiti', 'Microsoft YaHei']
-matplotlib.rcParams['axes.unicode_minus'] = False
-
 # 设置路径
 path_45 = "GSE181256_RAW/"
 path_58 = "GSE203084_RAW/"
